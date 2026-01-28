@@ -1,0 +1,377 @@
+/* Custom CSS for Bootstrap Implementation */
+
+/* Custom Color Variables */
+:root {
+    --bs-primary: #ed4b4b;
+    --bs-primary-rgb: 237, 75, 75;
+    --bs-dark: #252525;
+}
+
+/* Override Bootstrap Primary Color */
+.bg-primary,
+.btn-primary,
+.text-primary {
+    --bs-primary: #ed4b4b !important;
+    --bs-primary-rgb: 237, 75, 75 !important;
+}
+
+.btn-primary {
+    background-color: #ed4b4b !important;
+    border-color: #ed4b4b !important;
+}
+
+.btn-primary:hover {
+    background-color: #d43d3d !important;
+    border-color: #d43d3d !important;
+}
+
+/* Font Family */
+body {
+    font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: #ed4b4b !important;
+    position: relative;
+}
+
+.banner-arrow {
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-arrow-left {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%) scaleY(-1) rotate(180deg);
+}
+
+.banner-arrow-right {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-arrow:hover {
+    opacity: 0.9;
+}
+
+/* Header / Navbar */
+.navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ed4b4b !important;
+}
+
+.icon-btn {
+    color: #292D32;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 10px;
+    padding: 2px 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 605px;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1600') center/cover no-repeat;
+}
+
+/* Features Section */
+.features-section {
+    position: relative;
+    margin-top: -50px;
+    z-index: 10;
+}
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Offer Cards */
+.offer-card {
+    height: 279px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+}
+
+.offer-card img {
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 262px;
+    overflow: hidden;
+}
+
+.product-image img {
+    transition: transform 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.btn-cart {
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* CTA Banner */
+.cta-banner {
+    min-height: 242px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600') center/cover no-repeat;
+    padding: 60px 0;
+}
+
+/* Blog Cards */
+.blog-card {
+    height: 307px;
+    position: relative;
+}
+
+.blog-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 193px;
+    background: linear-gradient(to bottom, transparent, rgba(115, 115, 115, 0.9));
+    border-radius: 0 0 0.5rem 0.5rem;
+    pointer-events: none;
+}
+
+.blog-card img {
+    transition: transform 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #252525 !important;
+}
+
+.footer a {
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff !important;
+}
+
+.social-icon {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Newsletter Form */
+.footer .input-group .btn-danger {
+    background-color: #cb4a57;
+    border-color: #cb4a57;
+}
+
+.footer .input-group .btn-danger:hover {
+    background-color: #b23d49;
+    border-color: #b23d49;
+}
+
+/* Toast Notification */
+.toast-header.bg-success {
+    background-color: #4caf50 !important;
+}
+
+.toast-header.bg-danger {
+    background-color: #f44336 !important;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        height: 400px;
+    }
+
+    .features-section {
+        margin-top: 0;
+    }
+
+    .cta-banner {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .banner-arrow-left {
+        left: 20px;
+    }
+
+    .banner-arrow-right {
+        right: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
+
+/* Loading State */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ed4b4b;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d43d3d;
+}
+
+/* Button Focus States */
+.btn:focus,
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(237, 75, 75, 0.25);
+}
+
+/* Card Hover Effects */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Object Fit Utilities (for older browsers) */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .top-banner,
+    .btn {
+        display: none !important;
+    }
+}
+
+/* Accessibility Improvements */
+.btn:focus-visible,
+a:focus-visible {
+    outline: 2px solid #ed4b4b;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
